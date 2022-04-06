@@ -49,7 +49,6 @@ let currentScale = 1
 let pixelsArray = []
 
 socket.on('pixels', values => {
-  console.log('PIXELS', values)
   pixelsArray = values
 })
 
@@ -184,7 +183,6 @@ function draw () {
         noStroke()
         fill(...pixelsArray[pixelCoordX][pixelCoordY])
       }
-      noStroke()
 
       rect(x, y, pixelSize.width, pixelSize.height)
     }
