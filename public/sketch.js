@@ -5,7 +5,7 @@ const scaleLimits = {
   min: 0.5
 }
 
-socket = io('http://localhost:3000')
+socket = io('https://communityplace.herokuapp.com')
 
 
 let tileButton = null
