@@ -1,0 +1,92 @@
+body {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+button {
+    appearance: none;
+    background-color: white;
+    border-radius: 0.25rem;
+    padding: 0.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+
+.colors-panel {
+    /* background-color: red; */
+    opacity: 0;
+    transition: opacity .5s;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    position: absolute;
+    bottom: 5%;
+    left: 15%;
+    right: 15%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    z-index: 3;
+}
+
+.color-box {
+   width: 3.5rem;
+   height: 3.5rem;
+    margin: 0 0.2rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.confirmation {
+    opacity: 0;
+    z-index: 2;
+    bottom: 18%;
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 15%;
+    right: 15%;
+    transition: opacity .5s, transform 1s;
+    transform: translateY(150%);
+    /* animation: scale 1s linear alternate infinite; */
+}
+
+.confirmation div {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.colors-panel.choose .color-box {
+    animation: blink .5s alternate infinite;
+    opacity: 1;
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes blink {
+    from {
+        opacity: 0.8
+    }
+    to {
+        opacity: 1
+    }
+}
