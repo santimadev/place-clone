@@ -14,7 +14,19 @@ let tileButton = null
 let colorsPanel = null
 let confirmationColorButton = null
 
-const colors = []
+const colors = [
+  '245.35631430809084, 245.05211791874228, 183.0293301593736',
+  '39.01622738727421, 2.0270110415514697, 50.321979351156294',
+  '95.90804880293439, 7.894466494873616, 92.42813219995087',
+  '213.08902588267694, 68.24953017631081, 166.41469112185342',
+  '222.3044640400771, 24.3250901658998, 215.6860061507616',
+  '12.697453327616067, 66.59369413130253, 206.22540699485677',
+  '157.79550309689617, 198.54392404569901, 107.73665879434648',
+  '154.24598031585055, 55.765739357113, 204.40308161909675',
+  '166.13031883735385, 138.80150184235654, 128.51575158961907',
+  '153.6192683972938, 229.54173056016106, 64.75926352162826'
+]
+
 
 let selectedPixel = null
 
@@ -107,10 +119,10 @@ function setup () {
   canvas.mouseMoved(canvasMouseMoved)
   canvas.mouseOut(canvasMouseOut)
 
-  for (let i = 0; i < 10; i++) {
-    const color = generateRandomColor()
-    colors.push(color)
-  }
+  // for (let i = 0; i < 10; i++) {
+  //   const color = generateRandomColor()
+  //   colors.push(color)
+  // }
 
 
   canvas.canvas.addEventListener(
